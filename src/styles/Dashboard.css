@@ -1,0 +1,42 @@
+.dashboard-container {
+    padding: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    background-color: #f0f2f5; /* default light bg */
+    transition: background-color 0.3s ease;    
+  }
+  
+  @media (min-width: 768px) {
+    .dashboard-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .dashboard-container .ant-card {
+        margin-bottom: 20px;
+      }
+      
+  }
+
+  .app-container {
+    min-height: 100vh;
+    padding: 0px;
+    background-color: #f0f2f5; /* default light bg */
+    transition: background-color 0.3s ease;
+  }
+  
+  .app-container.dark {
+    background-color: #1f1f1f; /* dark background */
+  }
+  
+  .dashboard-header {
+    background-color: #1890ff; /* bright blue */
+    color: white;
+    padding: 16px;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .dashboard-header.dark {
+    background-color: #001529; /* deep navy for dark mode */
+  }  
+

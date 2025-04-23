@@ -1,46 +1,137 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 🧠 Finance Risk Analytics Dashboard
 
-## Available Scripts
+A full-stack web application that provides a visual dashboard for analyzing financial risk scores and customer credit data.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 📁 Project Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```
+/backend      # Express/Node.js backend
+/frontend     # React + TypeScript frontend
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
 
-### `npm test`
+## ⚙️ Setup Instructions
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🔧 Backend (Node.js + Express)
 
-### `npm run build`
+1. **Navigate to backend directory**:
+   ```bash
+   cd backend
+   ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. **Create `.env` file**:
+   Add the following (update with actual values if required):
+   ```
+   PORT=5000
+   DB_URL=your_database_connection_string
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4. **Run the backend server**:
+   ```bash
+   npm start
+   ```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 💻 Frontend (React + TypeScript)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Navigate to frontend directory**:
+   ```bash
+   cd frontend
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+3. **Start the development server**:
+   ```bash
+   npm start
+   ```
 
-## Learn More
+Frontend will run on `http://localhost:3000`  
+Backend will run on `http://localhost:5000`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 🔍 Risk Scoring Explanation
+
+Each customer is assigned a **Risk Score** between 0 and 100 based on multiple parameters like:
+
+- Credit Score
+- Income vs Expenses ratio
+- Payment history
+- Account age
+- Loan defaults (if any)
+
+### 📌 Example:
+
+**Customer Name:** *John Doe*  
+**Credit Score:** 610  
+**Monthly Income:** ₹50,000  
+**Monthly Expenses:** ₹47,000  
+**Status:** Review
+
+**Calculation Breakdown:**
+
+| Metric                  | Score   |
+|-------------------------|---------|
+| Credit Score (Moderate) | 25/40   |
+| High Expenses           | 10/20   |
+| No defaults             | 20/20   |
+| Short account age       | 5/10    |
+| Late payments (minor)   | 4/10    |
+| **Total**               | **64/100** |
+
+Hence, Risk Score = **64** → Placed in “Moderate Risk” category.
+
+---
+
+## 🤖 AI Tool Usage (ChatGPT Assistance)
+
+This project was fully guided and built using **ChatGPT-4**.  
+Here's how it helped:
+
+### 🛠️ Development Help:
+- Explained React and TypeScript setup
+- Helped with `useState`, `useEffect`, and props typing
+- Built filtering and sorting logic
+- Wrote Jest unit tests for components
+- Debugged styling issues
+
+### 📈 Visualization:
+- Guided on using Recharts for pie charts and line charts
+- Helped center-align charts and components
+
+### ⚙️ Backend:
+- Explained basic Express server setup
+- Helped design API structure
+- Suggested folder structure for maintainability
+
+---
+
+### 📸 Suggested Screenshots:
+
+1. **Dashboard Screenshot**  
+   _Show the complete working dashboard with filters and chart visualizations._
+
+2. **ChatGPT Conversations**  
+   _Screenshots of conversations with ChatGPT helping in React component creation, chart configuration, or risk calculation logic._
+
+3. **Code Snippet Screenshot**  
+   _Screenshot of code generated with AI help (e.g., PieChart component, filter section)._
+
+4. **Testing Output**  
+   _Screenshot of running Jest test results (if tests are included)._
+
+---

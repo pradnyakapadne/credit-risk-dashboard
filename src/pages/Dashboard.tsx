@@ -38,7 +38,7 @@ const Dashboard: React.FC<DashboardProps> = ({ isDarkMode, setIsDarkMode }) => {
 	const [filterValue, setFilterValue] = useState<string>("");
 
 	useEffect(() => {
-		axios.get("http://localhost:5000/api/customers").then(res => {
+		axios.get("https://credit-risk-dashboard-backend-4qw6.onrender.com/api/customers").then(res => {
 			const scoredData = res.data.map((c: Customer) => ({
 				...c,
 				riskScore: calculateRiskScore(c)
@@ -54,13 +54,13 @@ const Dashboard: React.FC<DashboardProps> = ({ isDarkMode, setIsDarkMode }) => {
 		);
 		setCustomers(updated);
 		try {
-			await axios.post("http://localhost:5000/api/status", {
+			await axios.post("https://credit-risk-dashboard-backend-4qw6.onrender.com/api/status", {
 				customerId: record.customerId,
 				status: value
 			});
 			message.success("Status updated");
 			if (record.riskScore && record.riskScore > 70) {
-				await axios.post("http://localhost:5000/api/alerts", { customerId: record.customerId });
+				await axios.post("https://credit-risk-dashboard-backend-4qw6.onrender.com/api/alerts", { customerId: record.customerId });
 			}
 		} catch {
 			message.error("Update failed");

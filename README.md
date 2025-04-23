@@ -57,7 +57,7 @@ A full-stack web application that provides a visual dashboard for analyzing fina
 
 1. **Navigate to frontend directory**:
    ```bash
-   cd frontend
+   cd credit-risk-dashboard
    ```
 
 2. **Install dependencies**:

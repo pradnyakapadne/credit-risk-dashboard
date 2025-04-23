@@ -142,6 +142,9 @@ Here's how it helped:
    
    <img width="1280" alt="nightmode_dashboard" src="https://github.com/user-attachments/assets/ad79f79e-981d-4776-a32e-640418bffb1e" />
 
+2. **Responsive Mobile View**
+   <img width="1279" alt="image" src="https://github.com/user-attachments/assets/5416230f-e964-4172-a7d2-76b0463187b9" />
+
 
 3. **ChatGPT Conversations** 
 

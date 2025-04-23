@@ -73,6 +73,8 @@ A full-stack web application that provides a visual dashboard for analyzing fina
 Frontend will run on `http://localhost:3000`  
 Backend will run on `http://localhost:5000`
 
+Deployment Frontend: https://vercel.com/pradnya-kapadnes-projects/credit-risk-dashboard
+Deployment Backend: https://credit-risk-dashboard-backend-4qw6.onrender.com
 ---
 
 ## 🔍 Risk Scoring Explanation

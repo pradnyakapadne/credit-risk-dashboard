@@ -137,6 +137,7 @@ Here's how it helped:
 ---
 <img width="1274" alt="dashboard" src="https://github.com/user-attachments/assets/9f16fe66-8c12-4302-b7d4-a30c23631a98" />
 <img width="1280" alt="nightmode_dashboard" src="https://github.com/user-attachments/assets/ad79f79e-981d-4776-a32e-640418bffb1e" />
+
 <img width="732" alt="risk_score-algorith" src="https://github.com/user-attachments/assets/3139c86b-1fc1-4f3e-9712-ebdd43b4d8e8" />
 
 

@@ -8,8 +8,19 @@ A full-stack web application that provides a visual dashboard for analyzing fina
 ## 📁 Project Structure
 
 ```
-/backend      # Express/Node.js backend
-/frontend     # React + TypeScript frontend
+├── backend      # Express/Node.js backend
+├── public/
+├── src/
+│   ├── assets/                # Images or icons
+│   ├── components/            # Reusable components (Charts, Table, etc.)
+│   ├── pages/                 # Main pages like Dashboard
+│   ├── styles/                # All CSS files
+│   │   └── Dashboard.css
+│   ├── utils/                 # Helper functions like risk score calculation
+│   ├── types/                 # TypeScript interfaces and types
+│   ├── App.tsx
+│   ├── index.tsx
+├── package.json
 ```
 
 ---
@@ -28,7 +39,7 @@ A full-stack web application that provides a visual dashboard for analyzing fina
    npm install
    ```
 
-3. **Create `.env` file**:
+3. **Create `.env` file (Optional)**:
    Add the following (update with actual values if required):
    ```
    PORT=5000
@@ -74,6 +85,9 @@ Each customer is assigned a **Risk Score** between 0 and 100 based on multiple p
 - Account age
 - Loan defaults (if any)
 
+**FORMULA**
+**debtRatio**=(outstandingLoans/monthlyIncome)×10
+**score**=(850−creditScore)×0.1 + repaymentPenalty + debtRatio
 
 **Calculation Breakdown:**
 
@@ -92,8 +106,8 @@ Each customer is assigned a **Risk Score** between 0 and 100 based on multiple p
 **Monthly Expenses:** ₹2900 
 **Status:** Review
 
-**debtRatio**=(monthlyIncome/outstandingLoans )×10
 **score**=(850−creditScore)×0.1+repaymentPenalty+debtRatio
+         =(850-655)*0.1+15+29.825 = 64.325
 **Round to nearest integer, then clamp between 0 and 100**: 64
 
 Hence, Risk Score = **64** → Placed in “Moderate Risk” category.
@@ -124,21 +138,31 @@ Here's how it helped:
 ### 📸 Suggested Screenshots:
 
 1. **Dashboard Screenshot**  
-   _Show the complete working dashboard with filters and chart visualizations._
+   <img width="1274" alt="dashboard" src="https://github.com/user-attachments/assets/9f16fe66-8c12-4302-b7d4-a30c23631a98" />
    
+   <img width="1280" alt="nightmode_dashboard" src="https://github.com/user-attachments/assets/ad79f79e-981d-4776-a32e-640418bffb1e" />
+
 
 3. **ChatGPT Conversations** 
 
-   _Screenshots of conversations with ChatGPT helping in React component creation, chart configuration, or risk calculation logic._
+  <img width="1076" alt="image" src="https://github.com/user-attachments/assets/7af18b7d-b0f4-4983-83c5-a3e0b5bf04ff" />
+  
+  <img width="1075" alt="image" src="https://github.com/user-attachments/assets/3a5f7a68-16e2-4941-a259-3ae49c5db9c8" />
+
+  <img width="732" alt="risk_score-algorith" src="https://github.com/user-attachments/assets/3139c86b-1fc1-4f3e-9712-ebdd43b4d8e8" />
+
+
 
 4. **Code Snippet Screenshot**  
-   _Screenshot of code generated with AI help (e.g., PieChart component, filter section)._
+   <img width="1081" alt="image" src="https://github.com/user-attachments/assets/7040554c-4c46-4d38-bb6e-d2d22c79b26d" />
+
+   <img width="1075" alt="image" src="https://github.com/user-attachments/assets/1f66ef2e-294e-495f-b881-5be04711a9d6" />
+
 
 ---
-<img width="1274" alt="dashboard" src="https://github.com/user-attachments/assets/9f16fe66-8c12-4302-b7d4-a30c23631a98" />
-<img width="1280" alt="nightmode_dashboard" src="https://github.com/user-attachments/assets/ad79f79e-981d-4776-a32e-640418bffb1e" />
 
-<img width="732" alt="risk_score-algorith" src="https://github.com/user-attachments/assets/3139c86b-1fc1-4f3e-9712-ebdd43b4d8e8" />
+
+
 
 
 

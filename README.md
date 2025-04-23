@@ -74,24 +74,27 @@ Each customer is assigned a **Risk Score** between 0 and 100 based on multiple p
 - Account age
 - Loan defaults (if any)
 
-### 📌 Example:
-
-**Customer Name:** *John Doe*  
-**Credit Score:** 610  
-**Monthly Income:** ₹50,000  
-**Monthly Expenses:** ₹47,000  
-**Status:** Review
 
 **Calculation Breakdown:**
 
-| Metric                  | Score   |
-|-------------------------|---------|
-| Credit Score (Moderate) | 25/40   |
-| High Expenses           | 10/20   |
-| No defaults             | 20/20   |
-| Short account age       | 5/10    |
-| Late payments (minor)   | 4/10    |
-| **Total**               | **64/100** |
+
+### 📌 Example:
+
+**Customer Name:** *Kevin Baker* 
+**Loan Repayment History**: [1, 1, 0, 1, 0, 0, 1, 1] 
+**Missed Payments: count of 0’s**: 3
+**Credit Score:** 655  
+**repaymentPenalty**: 3 × 5 = 15
+**Outstanding Loans / Income**:17000 / 5700 ≈ 2.9825
+**debtRatio**: 2.9825 × 10 ≈ 29.825
+**Credit‐score penalty**: (850 – 655) × 0.1 = 195 × 0.1 = 19.5
+**Monthly Income:** ₹5700 
+**Monthly Expenses:** ₹2900 
+**Status:** Review
+
+**debtRatio**=(monthlyIncome/outstandingLoans )×10
+**score**=(850−creditScore)×0.1+repaymentPenalty+debtRatio
+**Round to nearest integer, then clamp between 0 and 100**: 64
 
 Hence, Risk Score = **64** → Placed in “Moderate Risk” category.
 
@@ -104,14 +107,12 @@ Here's how it helped:
 
 ### 🛠️ Development Help:
 - Explained React and TypeScript setup
-- Helped with `useState`, `useEffect`, and props typing
+- Helped me with the calculation in risk-scoring calculations 
 - Built filtering and sorting logic
-- Wrote Jest unit tests for components
 - Debugged styling issues
 
 ### 📈 Visualization:
 - Guided on using Recharts for pie charts and line charts
-- Helped center-align charts and components
 
 ### ⚙️ Backend:
 - Explained basic Express server setup
@@ -124,14 +125,19 @@ Here's how it helped:
 
 1. **Dashboard Screenshot**  
    _Show the complete working dashboard with filters and chart visualizations._
+   
 
-2. **ChatGPT Conversations**  
+3. **ChatGPT Conversations** 
+
    _Screenshots of conversations with ChatGPT helping in React component creation, chart configuration, or risk calculation logic._
 
-3. **Code Snippet Screenshot**  
+4. **Code Snippet Screenshot**  
    _Screenshot of code generated with AI help (e.g., PieChart component, filter section)._
 
-4. **Testing Output**  
-   _Screenshot of running Jest test results (if tests are included)._
-
 ---
+<img width="1274" alt="dashboard" src="https://github.com/user-attachments/assets/9f16fe66-8c12-4302-b7d4-a30c23631a98" />
+<img width="1280" alt="nightmode_dashboard" src="https://github.com/user-attachments/assets/ad79f79e-981d-4776-a32e-640418bffb1e" />
+<img width="732" alt="risk_score-algorith" src="https://github.com/user-attachments/assets/3139c86b-1fc1-4f3e-9712-ebdd43b4d8e8" />
+
+
+
